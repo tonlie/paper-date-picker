@@ -75,9 +75,26 @@ styling:
         @apply(--paper-date-picker);
       }
 
+      @media (max-width: 800px) {
+        #datePicker {
+          width: 100%;
+        }
+        :host([narrow]) #datePicker {
+          width: 100%;
+        }
+      }
+
+      @media (min-width: 800px) {
+        #datePicker {
+          width: 512px;
+        }
+        :host([narrow]) #datePicker {
+          width: 328px;
+        }
+      }
+
       /** Landscape ******************/
       #datePicker {
-        width: 100%;
         height: 248px;
         @apply(--layout-horizontal);
       }
@@ -88,7 +105,6 @@ styling:
 
       /** Narrow *********************/
       :host([narrow]) #datePicker {
-        width: 100%;
         height: 428px;
         @apply(--layout-vertical);
       }
